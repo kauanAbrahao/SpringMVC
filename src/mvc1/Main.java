@@ -89,10 +89,11 @@ EXPLICAÇÃO: Digamos que pedimos um view com o nome lista-de-produtos. O Spring i
   
 	
 	
-*/
+*/ 
 	
 	
-/*
+/*             											CRIANDO PRIMEIRA CONTROLLER E VIEW
+ * -------------------------------------------------------------------------------------------------------------------------------------------
  * Certo, vamos criar uma controller e uma view:
  * 
  * Passo 1: Criar uma classe controller;
@@ -116,13 +117,64 @@ EXPLICAÇÃO: Digamos que pedimos um view com o nome lista-de-produtos. O Spring i
         Retornar um view name. No nosso caso, será a main-page. Lembre-se que se tornará /WEB-INF/view/main-page.jsp
         
  * ---- Passo 5:
-        Criar a página no diretório que está mapeado, ou seja, /WEB-INF/view/
-        
-        
-  
- 		
+        Criar a página no diretório que está mapeado, ou seja, /WEB-INF/view/ 		
 	 
 */
+	
+	
+/* 
+ * /*             											LENDO DADOS DE UM HTML
+ * -------------------------------------------------------------------------------------------------------------------------------------------
+ 	Nós teremos um formulário apresentado ao usuário, onde ele irá inserir seu nome. Após inserir e clicar em submeter,
+ 	mostraremos a ele uma página de boas vindas!!!!
+ 	
+ 	A classe controller se chamará BemVindoController
+ 	
+ 	 * ------ Passo 1:
+ 		Criar a classe BemVindoController com @Controller
+ 		
+ * -----  Passo 2:
+        Criar um método para mostrar o formulário, e outro que irá processá-lo.
+        
+ * ----- Passo 3:
+        Adicionar a anotação @RequestMapping nos metodos.
+        
+ * ----- Passo 4:
+        Retornar um view name.
+        
+ * ---- Passo 5:
+        Criar a página no diretório que está mapeado, ou seja, /WEB-INF/view/ 
+        
+        (RETORNAR A EXEMPLO ANTERIOR EM CASO DE DÚVIDAS)
+        (REPARE NOS HTML! {param.nomeEstudante} vem de input name)
+        
+        
+
+
+*/
+	/*
+															TRABALHANDO COM MODELS
+	 * -------------------------------------------------------------------------------------------------------------------------------------------
+	
+	- Na Controller, nós podemos adicionar atributos ao nosso model (objeto).
+	- A view page(JSP) pode acessar esses atributos da model e exibir!
+	
+	Exemplo:
+	- Na classe BemVindoController, nós temos um método com @RequestMapping("/formularioLendoModel")
+	- Ler o passo a passo comentado no método!
+	
+	 */
+	
+	
+	/*
+															BÁSICO: USANDO CSS E JS NO SPRING
+		* -------------------------------------------------------------------------------------------------------------------------------------------
+		
+		- vamos criar um diretório para inserir nossos arquivos CSS ou JS. No nosso exemplo, /WebConcent/resources/css
+		- indicaremos em nosso springmvc-config.xml o caminho: <mvc:resources mapping="/resources/**" location="/resources/"></mvc:resources>
+		- no html, dentro do href do link, indicar o caminho com ${pageContext.request.contextPath}/resources/css/meuCss.css"
+*/
+	
 	
 	
 	

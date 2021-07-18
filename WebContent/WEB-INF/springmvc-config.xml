@@ -25,11 +25,15 @@
 		
 	</bean>
 	
-		<!-- Load custom error message -->
+		<!-- Load custom error message
 		<bean id ="messageSource"
 		class="org.springframework.context.support.ResourceBundleMessageSource">
 		<property name="basenames" value = "resources/messages" /> 
 		</bean>
+		 -->
+		
+		<!-- Diretório dos arquivos css -->
+		<mvc:resources mapping="/resources/**" location="/resources/"></mvc:resources>
 		
 
 </beans>
