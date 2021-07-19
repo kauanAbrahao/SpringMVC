@@ -5,8 +5,10 @@ import javax.servlet.http.HttpServletRequest;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
+@RequestMapping("/form")
 public class BemVindoController {
 	
 	@RequestMapping("/mostraFormulario")
@@ -33,6 +35,16 @@ public class BemVindoController {
 		
 		return "formularioProcessadoComModel";
 		
+	}
+	
+	@RequestMapping("/formularioRequestParam")
+	public String formularioRequestParam(@RequestParam("nomeEstudante") String name, Model model) {
+		
+		//Esse @RequestMapping faz a mesma coisa que o método acima
+		name = name.toUpperCase() + "!!!";
+		model.addAttribute("nomeModel", name);
+		
+		return "formularioProcessadoComModel";
 	}
 
 }

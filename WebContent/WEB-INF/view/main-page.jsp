@@ -6,7 +6,7 @@
 	<h2>Seja bem vindo à nossa página!</h2>
 	</body>
 	
-	<form action ="mostraFormulario">
+	<form action ="form/mostraFormulario">
 		<input type="submit" value ="Formulário"/>
 	</form>
 	

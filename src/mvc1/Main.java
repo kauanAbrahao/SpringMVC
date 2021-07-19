@@ -156,12 +156,12 @@ EXPLICAÇÃO: Digamos que pedimos um view com o nome lista-de-produtos. O Spring i
 															TRABALHANDO COM MODELS
 	 * -------------------------------------------------------------------------------------------------------------------------------------------
 	
-	- Na Controller, nós podemos adicionar atributos ao nosso model (objeto).
-	- A view page(JSP) pode acessar esses atributos da model e exibir!
-	
-	Exemplo:
-	- Na classe BemVindoController, nós temos um método com @RequestMapping("/formularioLendoModel")
-	- Ler o passo a passo comentado no método!
+		- Na Controller, nós podemos adicionar atributos ao nosso model (objeto).
+		- A view page(JSP) pode acessar esses atributos da model e exibir!
+		
+		Exemplo:
+		- Na classe BemVindoController, nós temos um método com @RequestMapping("/formularioLendoModel")
+		- Ler o passo a passo comentado no método!
 	
 	 */
 	
@@ -173,6 +173,45 @@ EXPLICAÇÃO: Digamos que pedimos um view com o nome lista-de-produtos. O Spring i
 		- vamos criar um diretório para inserir nossos arquivos CSS ou JS. No nosso exemplo, /WebConcent/resources/css
 		- indicaremos em nosso springmvc-config.xml o caminho: <mvc:resources mapping="/resources/**" location="/resources/"></mvc:resources>
 		- no html, dentro do href do link, indicar o caminho com ${pageContext.request.contextPath}/resources/css/meuCss.css"
+*/
+	
+	
+	/*
+														  	@RequestParam
+		* -------------------------------------------------------------------------------------------------------------------------------------------
+		
+		- Nós vimos em TRABALHANDO COM MODELS, uma forma de capturar um input feito pelo usuário. Agora, aprenderemos uma forma mais sofisticada.
+		Exemplo:
+		- Na classe BemVindoController, nós temos um método com @RequestMapping("/formularioRequestParam")
+		- Ler o passo a passo comentado no método!
+*/
+	
+	
+	
+	/*
+	 * 
+	 * 
+  															MVC Form Tags
+* -------------------------------------------------------------------------------------------------------------------------------------------
+		
+		- Formas de criar textFields, Buttons etc com o Spring, fazendo um binding com um objeto no Java.
+		
+		Forms Tags:
+		form:form          -->  main form container
+		form:input         -->  text field
+		form:textarea      -->  multi-line text field
+		form:checkbox      -->  check box
+		form:radiobutton   -->  radio buttons
+		form:select        -->  drop down list (combobox)
+
+*		- Desta forma, teremos:
+*       <html>
+*           tags de html normal...
+*           Spring MVC From Tags
+*           html de novo...
+*       </html>
+
+*		Para configurar, precisamos adicionar <%@ taglib prefix="form" uri=http://www.springframework.org/tags/form" %> no HTML/JSP
 */
 	
 	
