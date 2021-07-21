@@ -1,39 +1,35 @@
 <%@ taglib prefix = "form" uri="http://www.springframework.org/tags/form" %>
+
 <!DOCTYPE html>
 
 <html>
+
 <head>
-	<title>Student Form!</title>
 </head>
 
 <body>
-
-	<form:form action = "processForm" modelAttribute="student">
-	First name: <form:input path = "firstName"/>
-	<br>
+	<form:form action="processAluno" modelAttribute="aluno">
 	
-	Last name: <form:input path = "lastName"/>
-	<br>
-	
-	Country: 
-	<form:select path = "country">
-		<form:options items = "${student.countryOptions}"/>
-	</form:select>	
-	<br><br>
-	
-	Favorite Programming Language:
-	<form:radiobuttons path="favoriteLanguage" items = "${student.languageOptions}" />
-	<br><br>
-	
-	Operating System:
-	
-	Linux<form:checkbox path="operatingSystem" value = "Linux"/>
-	Windows<form:checkbox path="operatingSystem" value = "Windows"/>
-	MacOS<form:checkbox path="operatingSystem" value = "MacOS"/>
-	
-	<input type = "submit" value = "Submit"/>
-	
+		First name: <form:input path="primeiroNome" /> <!-- Isso serve como getFirstname() e setFirstname() -->
+		<br>
+		Last name: <form:input path="segundoNome" />
+		<br>
+		<!-- Ao invés de HardCode, podemos usar uma HashMap
+		Country: <form:select path="pais">
+					<form:option value="Brasil" label="BRA" />
+					<form:option value="Argentina" label="ARG" />
+					<form:option value="Uruguai" label="URU" />
+				</form:select>
+		VEJA ABAIXO: -->
+		<form:select path="pais">
+			<form:options items="${paises}"/>
+		</form:select>
+		
+		<!--  Outra forma ainda é usar um .properties. Veja countries.properties -->
+			
+		<input type="submit" value="Submit"/>
+		
 	</form:form>
-</body>
 
+</body>
 </html>

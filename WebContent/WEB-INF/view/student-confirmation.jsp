@@ -3,24 +3,16 @@
 
 <html>
 <head>
-	<title>Student Confirmation</title>
+	<title>Aluno Confirmacao</title>
 </head>
 
 <body>
 
-The student is confirmed: ${student.firstName} ${student.lastName}
+O estudante foi registrado: ${aluno.primeiroNome} ${aluno.segundoNome}
 <br>
-Country: ${student.country}
-<br><br>
+País escolhido: ${aluno.pais}
 
-Favorite Programming Language: ${student.favoriteLanguage}
-<br><br>
-
-Operating System: 
-
-<ul>
-	<c:forEach var="temp" items="${student.operatingSystem}">
-		<li>${temp}<li>
-	</c:forEach>
-</ul>
 </body>
+
+
+</html>

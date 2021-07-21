@@ -10,5 +10,9 @@
 		<input type="submit" value ="Formulário"/>
 	</form>
 	
+	<form action ="student/showAluno">
+		<input type="submit" value ="Formulário Aluno"/>
+	</form>
+	
 
 </html>

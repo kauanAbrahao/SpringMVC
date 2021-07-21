@@ -212,6 +212,10 @@ EXPLICAÇÃO: Digamos que pedimos um view com o nome lista-de-produtos. O Spring i
 *       </html>
 
 *		Para configurar, precisamos adicionar <%@ taglib prefix="form" uri=http://www.springframework.org/tags/form" %> no HTML/JSP
+*
+*		EXEMPLO:
+*       -Ver comentários da StudentControll.java
+*       - Contém exemplos de input, textarea, radiobutton etc
 */
 	
 	
